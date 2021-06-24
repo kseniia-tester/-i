@@ -178,9 +178,9 @@ class RadioTest {
     @Test
     public void shouldIncreaseSound2() {
         Radio radio = new Radio();
-        radio.setCurrentVolumeLevel(101);
-        radio.increaseVolume();
-        assertEquals(100, radio.getCurrentVolumeLevel());
+        radio.setCurrentVolumeLevel(100);
+        radio.decreaseVolume();
+        assertEquals(99, radio.getCurrentVolumeLevel());
     }
 
     @Test
