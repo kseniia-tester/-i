@@ -41,7 +41,7 @@ public class Radio {
         return currentStation;
     }
 
-    //    Let's do it for volume!'
+
     private boolean isVolumeMax(int currentVolume) {
         return currentVolume == 100;
     }
