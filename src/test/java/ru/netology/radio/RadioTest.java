@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RadioTest {
 
     @Test
-    void stationUnderLimitDefault() {
+    void stationUnderLimit() {
         Radio service = new Radio();
 
         service.setCurrentStation(-1);
@@ -18,7 +18,7 @@ public class RadioTest {
     }
 
     @Test
-    void stationAboveLimitDefault() {
+    void stationAboveLimit() {
         Radio service = new Radio();
 
         service.setCurrentStation(10);
@@ -29,7 +29,7 @@ public class RadioTest {
     }
 
     @Test
-    void stationAboveLimitConstructor() {
+    void stationAboveLimitData() {
         Radio service = new Radio(0, 3, 20);
 
         service.setCurrentStation(-1);
@@ -41,7 +41,7 @@ public class RadioTest {
     }
 
     @Test
-    void stationPrevButtonDefault() {
+    void stationPrevButton() {
         Radio service = new Radio();
 
         assertEquals(0, service.getCurrentStation());
@@ -53,7 +53,7 @@ public class RadioTest {
     }
 
     @Test
-    void stationPrevButtonConstructor() {
+    void stationPrevButtonData() {
         Radio service = new Radio(0, 1, 25);
 
         assertEquals(0, service.getCurrentStation());
@@ -65,7 +65,7 @@ public class RadioTest {
     }
 
     @Test
-    void stationNextButtonDefault() {
+    void stationNextButton() {
         Radio service = new Radio();
 
         assertEquals(0, service.getCurrentStation());
@@ -78,7 +78,7 @@ public class RadioTest {
     }
 
     @Test
-    void stationNextButtonConstructor() {
+    void stationNextButtonData() {
         Radio service = new Radio(0, 1, 30);
 
         assertEquals(0, service.getCurrentStation());
@@ -104,7 +104,7 @@ public class RadioTest {
     }
 
     @Test
-    void volumeUpAboveMax() {
+    void volumeMoreThanMax() {
         Radio service = new Radio(0, 99, 10);
 
 
